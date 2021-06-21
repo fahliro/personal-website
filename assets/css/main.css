@@ -1,0 +1,125 @@
+/* import another */
+@import 'grid.min.css';
+@import 'variable.css';
+
+/* declare font */
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+/* set default */
+html, body {
+  font-family: Lato;
+  margin: 0;
+}
+p {
+  line-height: 25px;
+  font-size: large;
+}
+
+/* navigation */
+.navigation {
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  background: var(--woodsmoke-05);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  color: var(--white);
+}
+.navigation__logo__img {
+  width: 100px;
+}
+.navigation__menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navigation__menu_item {
+  cursor: pointer;
+  color: var(--white-05);
+}
+.navigation__menu_item--active, .navigation__menu_item:hover {
+  color: var(--shite);
+}
+.navigation__menu_item:not(:last-child) {
+  margin-right: 20px;
+}
+/* section 1 */
+.intro {
+  background: url(../images/17856.svg);
+  height: 500px;
+  padding-top: 200px;
+  color: var(--white);
+}
+.intro__greetings__name {
+  font-weight: bold;
+  font-size: xx-large;
+  margin-bottom: 5px;
+}
+.intro__greetings__role {
+  font-size: x-large;
+  color: var(--white-05);
+  margin-bottom: 10px;
+}
+.intro__photo {
+  display: flex;
+  justify-content: flex-end;
+}
+.intro__photo__img {
+  width: 200px;
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+/* section 2 */
+.work {
+  background: url(../images/17356.svg);
+  height: 300px;
+  color: var(--white);
+}
+/* section 3 */
+.contact {
+  background: url(../images/17357.svg);
+  height: 200px;
+}
+
+/* dry */
+.intro, .work, .contact {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* breakpoints */
+@media(max-width: 1200px) {}
+@media(max-width: 992px) {}
+@media(max-width: 768px) {}
+@media(max-width: 576px) {
+  /* section 1 */
+  .intro {
+    padding-top: 100px;
+  }
+  .intro__photo {
+    order: 1;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .intro__photo__img {
+    width: 150px;
+  }
+  .intro__greetings {
+    order: 2;
+  }
+}
+
+/* animations */
+@keyframes floating {
+  0%   {padding-top:0px;}
+  25%  {padding-top:0px;}
+  50%  {padding-top:10px;}
+  75%  {padding-top:10px;}
+  100% {padding-top:0px;}
+}
