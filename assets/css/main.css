@@ -8,14 +8,21 @@
   src: url(../fonts/Lato-Regular.ttf);
 }
 
-/* set default */
+/* set global */
 html, body {
   font-family: Lato;
   margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: var(--titan-white);
 }
 p {
   line-height: 25px;
   font-size: large;
+}
+a {
+  text-decoration: none;
+  color: unset;
 }
 
 /* navigation */
@@ -29,7 +36,7 @@ p {
   z-index: 1;
   color: var(--white);
 }
-.navigation__logo__img {
+.navigation__logo img {
   width: 100px;
 }
 .navigation__menu {
@@ -37,23 +44,26 @@ p {
   justify-content: flex-end;
   align-items: center;
 }
-.navigation__menu_item {
+.navigation__menu__item {
   cursor: pointer;
   color: var(--white-05);
 }
-.navigation__menu_item--active, .navigation__menu_item:hover {
-  color: var(--shite);
+.navigation__menu__item--active, .navigation__menu__item:hover {
+  color: var(--white);
 }
-.navigation__menu_item:not(:last-child) {
+.navigation__menu a:not(:last-child) {
   margin-right: 20px;
 }
+
 /* section 1 */
 .intro {
   background: url(../images/17856.svg);
-  height: 500px;
   padding-top: 200px;
   color: var(--white);
 }
+.intro .row {
+  padding-bottom: 100px;
+} 
 .intro__greetings__name {
   font-weight: bold;
   font-size: xx-large;
@@ -68,22 +78,50 @@ p {
   display: flex;
   justify-content: flex-end;
 }
-.intro__photo__img {
+.intro__photo img {
   width: 200px;
-  animation-name: floating;
+  /* animation-name: floating;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
+}
+.intro__cta {
+  font-size: large;
 }
 /* section 2 */
 .work {
   background: url(../images/17356.svg);
-  height: 300px;
   color: var(--white);
+  margin-bottom: 70px;
+}
+.work__title {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.work__desc {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.work__box {
+  height: 200px;
+  margin-bottom: 30px;
 }
 /* section 3 */
 .contact {
   background: url(../images/17357.svg);
-  height: 200px;
+}
+.contact__title {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.contact__box {
+  height: 400px;
+}
+.contact__footer {
+  color: var(--white);
+  text-align: right;
+  margin-bottom: 20px;
 }
 
 /* dry */
@@ -91,6 +129,12 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.work__box, .contact__box {
+  width: 100%;
+  box-shadow: rgb(54 127 238 / 6%) 0px 27px 72px;
+  border-radius: 5px;
+  background-color: var(--white);
 }
 
 /* breakpoints */
@@ -107,7 +151,7 @@ p {
     justify-content: center;
     margin-bottom: 30px;
   }
-  .intro__photo__img {
+  .intro__photo img {
     width: 150px;
   }
   .intro__greetings {
@@ -116,10 +160,10 @@ p {
 }
 
 /* animations */
-@keyframes floating {
+/* @keyframes floating {
   0%   {padding-top:0px;}
   25%  {padding-top:0px;}
   50%  {padding-top:10px;}
   75%  {padding-top:10px;}
   100% {padding-top:0px;}
-}
+} */

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>robbyDev</title>
+    <link rel="shortcut icon" href="./assets//images/34566.png" type="image/x-icon" sizes="1600x160">
+    <title>robbyDev | Personal Website</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -12,47 +13,113 @@
         <div class="col-12 col-sm-8 offset-sm-2">
             <div class="row">
                 <div class="navigation__logo col-4">
-                    <img src="./assets/images/17846.png" class="navigation__logo__img" alt="Logo">
+                    <a href="#intro">
+                        <img src="./assets/images/17846.png" alt="Logo">
+                    </a>
                 </div>
                 <div class="navigation__menu col-8">
-                    <div class="navigation__menu_item navigation__menu_item--active">Home</div>
-                    <div class="navigation__menu_item">Home</div>
-                    <div class="navigation__menu_item">Home</div>
+                    <a href="#intro">
+                        <div class="navigation__menu__item navigation__menu__item--active" onclick="handleActiveMenuOnClick()">
+                            Home
+                        </div>
+                    </a>
+                    <a href="#work">
+                        <div class="navigation__menu__item" onclick="handleActiveMenuOnClick()">
+                            Work
+                        </div>
+                    </a>
+                    <a href="#contact">
+                        <div class="navigation__menu__item" onclick="handleActiveMenuOnClick()">
+                            Contact
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="col-12 col-sm-8 offset-sm-2">
             <div class="row">
                 <div class="intro__greetings col-12 col-sm-6">
-                    <div class="intro__greetings intro__greetings__name">
+                    <div class="intro__greetings__name">
                         Hi, I'm Robby
                     </div>
-                    <div class="intro__greetings intro__greetings__role">
+                    <div class="intro__greetings__role">
                         Frontend Web Developer
                     </div>
-                    <div class="intro__greetings intro__greetings__desc">
+                    <div class="intro__greetings__desc">
                         <p>
                             Create a showcase website for your business by prioritizing aesthetics.
                         </p>
                     </div>
                 </div>
                 <div class="intro__photo col-12 col-sm-6">
-                    <img src="./assets/images/17876.svg" class="intro__photo__img" alt="Photo">
+                    <img src="./assets/images/17876.svg" alt="Photo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="intro__cta col-12">
+                   [scroll] See the work I've done below
                 </div>
             </div>
         </div>
     </section>
-    <section class="work">
+    <section class="work" id="work">
         <div class="col-12 col-sm-8 offset-sm-2">
-            work
+            <div class="row">
+                <div class="col-12 work__title">
+                    Work
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 offset-sm-3 work__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellendus temporibus dolores animi soluta beatae unde eius, dignissimos eum a sunt similique repudiandae, doloremque inventore, iure error expedita libero enim?
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <div class="work__box"></div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="work__box"></div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="work__box"></div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="work__box"></div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="work__box"></div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="work__box"></div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="col-12 col-sm-8 offset-sm-2">
-            contact
+            <div class="row">
+                <div class="col-12 contact__title">
+                    Contact
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="contact__box"></div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ipsum animi inventore. Aliquam, reprehenderit tempore. Omnis aliquam maiores facilis rerum, itaque, corporis ab, tenetur qui iusto totam cum natus cupiditate.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 contact__footer">
+                    Designed with [love]
+                </div>
+            </div>
         </div>
     </section>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
