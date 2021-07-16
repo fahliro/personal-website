@@ -1,16 +1,11 @@
-/* import another */
+/* import */
 @import 'grid.min.css';
 @import 'variable.css';
+/* end import */
 
-/* declare font */
-@font-face {
-  font-family: Lato;
-  src: url(../fonts/Lato-Regular.ttf);
-}
-
-/* set global */
+/* global */
 html, body {
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -24,6 +19,11 @@ a {
   text-decoration: none;
   color: unset;
 }
+img {
+  width: 100%;
+  height: 100%;
+}
+/* end global */
 
 /* navigation */
 .navigation {
@@ -36,8 +36,11 @@ a {
   z-index: 1;
   color: var(--white);
 }
-.navigation__logo img {
+.navigation__logo__desktop {
   width: 100px;
+}
+.navigation__logo__mobile {
+  display: none;
 }
 .navigation__menu {
   display: flex;
@@ -54,15 +57,19 @@ a {
 .navigation__menu a:not(:last-child) {
   margin-right: 20px;
 }
+/* end navigation */
 
 /* section 1 */
 .intro {
   background: url(../images/17856.svg);
   padding-top: 200px;
   color: var(--white);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.intro .row {
-  padding-bottom: 100px;
+.intro .row:first-child {
+  margin-bottom: 180px;
 } 
 .intro__greetings__name {
   font-weight: bold;
@@ -84,64 +91,116 @@ a {
   animation-duration: 5s;
   animation-iteration-count: infinite; */
 }
-.intro__cta {
-  font-size: large;
+.intro__cta a {
+  display: flex;
 }
+.intro__cta a svg {
+  margin-right: 5px;
+}
+/* end section 1 */
+
 /* section 2 */
 .work {
   background: url(../images/17356.svg);
   color: var(--white);
-  margin-bottom: 70px;
+  background-size: 108%;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-top: 70px;
 }
 .work__title {
   font-size: xx-large;
   font-weight: bold;
-  margin-bottom: 20px;
-}
-.work__desc {
-  text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .work__box {
   height: 200px;
   margin-bottom: 30px;
+  cursor: pointer;
+  transition: all .3s;
 }
+.work__box.work__box--bottom {
+  margin-bottom: 0;
+}
+.work__box:hover {
+  transform: scale(1.05);
+}
+/* end section 2 */
+
 /* section 3 */
 .contact {
-  background: url(../images/17357.svg);
+  padding-top: 70px;
 }
 .contact__title {
   font-size: xx-large;
   font-weight: bold;
-  margin-bottom: 20px;
-}
-.contact__box {
-  height: 400px;
+  margin-bottom: 50px;
 }
 .contact__footer {
+  margin: 100px 0 15px 0;
+}
+.contact__footer .row a {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact__footer__btt {
+  background: var(--royal-blue);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   color: var(--white);
-  text-align: right;
-  margin-bottom: 20px;
+  cursor: pointer;
+}
+.contact__footer__text {
+  display: flex;
+  align-items: center;
+}
+.contact__footer__text svg {
+  margin-left: 5px;
 }
 
+
+/* end section 3 */
+
 /* dry */
-.intro, .work, .contact {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.work__box, .contact__box {
+.work__box {
   width: 100%;
   box-shadow: rgb(54 127 238 / 6%) 0px 27px 72px;
   border-radius: 5px;
   background-color: var(--white);
 }
+.contact__footer__btt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* end dry */
 
 /* breakpoints */
+/* minnimum */
+@media(min-width: 1920px) {
+  .col-sm-8 {
+    padding: 0 150px 0 150px;
+  }
+  .intro .row:first-child {
+    margin-bottom: 490px;
+  }
+}
+/* end minimum */
+
+/* maximum */
 @media(max-width: 1200px) {}
 @media(max-width: 992px) {}
 @media(max-width: 768px) {}
 @media(max-width: 576px) {
+  /* nav section */
+  .navigation__logo__mobile {
+    display: block;
+    width: 50px;
+  }
+  .navigation__logo__desktop {
+    display: none;
+  }
   /* section 1 */
   .intro {
     padding-top: 100px;
@@ -157,7 +216,14 @@ a {
   .intro__greetings {
     order: 2;
   }
+  /* section 2 */
+  .work {
+    background-size: 470%;
+    background-position: top center;
+  }
 }
+/* end maximum */
+/* end breakpoints */
 
 /* animations */
 /* @keyframes floating {
@@ -167,3 +233,4 @@ a {
   75%  {padding-top:10px;}
   100% {padding-top:0px;}
 } */
+/* end animations */
