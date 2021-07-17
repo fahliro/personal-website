@@ -25,7 +25,7 @@
                 <div class="navigation__menu col-8">
                     <a href="#intro">
                         <div class="navigation__menu__item navigation__menu__item--home  navigation__menu__item--active" onclick="handleActiveMenuOnClick('home')">
-                            Home
+                            Beranda
                         </div>
                     </a>
                     <!-- <a href="#work">
@@ -35,14 +35,25 @@
                     </a> -->
                     <a href="#package">
                         <div class="navigation__menu__item navigation__menu__item--package" onclick="handleActiveMenuOnClick('package')">
-                            Package
+                            Paket
                         </div>
                     </a>
                     <a href="#contact">
                         <div class="navigation__menu__item navigation__menu__item--contact" onclick="handleActiveMenuOnClick('contact')">
-                            Contact
+                            Kontak
                         </div>
                     </a>
+                    <div class="navigation__menu__flag">
+                        <img src="./assets/images/17852.svg" alt="ID" onclick="toggleLanguage()">
+                        <div class="navigation__menu__flag__option">
+                            <div class="navigation__menu__flag__option__id" onclick="switchLanguage('id')">
+                                <img src="./assets/images/17852.svg" alt="ID">
+                            </div>
+                            <div class="navigation__menu__flag__option__en" onclick="switchLanguage('en')">
+                                <img src="./assets/images/17353.svg" alt="EN">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,14 +63,14 @@
             <div class="row">
                 <div class="intro__greetings col-12 col-sm-6">
                     <div class="intro__greetings__name">
-                        Hi, I'm Robby
+                        Hai, Saya Robby
                     </div>
                     <div class="intro__greetings__role">
                         Frontend Web Developer
                     </div>
                     <div class="intro__greetings__desc">
                         <p>
-                            I will create a showcase website for your business by prioritizing aesthetics
+                            Saya akan membuat website showcase untuk bisnis anda dengan mengutamakan estetika
                         </p>
                     </div>
                 </div>
@@ -70,9 +81,8 @@
             <div class="row">
                 <div class="intro__cta col-12">
                     <a href="#package">
-                        <p>
-                            <i data-feather="arrow-down"></i>&nbsp;See the package below
-                        </p>
+                        <i data-feather="arrow-down"></i>&nbsp;
+                        <p>Lihat paket dibawah ini</p>
                     </a>
                 </div>
             </div>
@@ -120,7 +130,7 @@
         <div class="col-12 col-sm-8 offset-sm-2">
             <div class="row">
                 <div class="col-12 package__title">
-                    Package
+                    Paket
                 </div>
             </div>
         </div>
@@ -139,7 +149,7 @@
                         Dengan memilih paket Basic, Anda akan mendapatkan source code website (tidak termasuk domain dan hosting) dengan tampilan sesuai yang Anda inginkan (maksimal 5 halaman/menu), sudah menggunakan multi bahasa (Indonesia dan Inggris), dan garansi support (revisi tampilan/mengganti konten) selama 1 bulan, terhitung sejak website telah selesai dikerjakan.
                     </div>
                     <div class="package__card__button">
-                        <button>Get it now</button>
+                        <button>Dapatkan Sekarang</button>
                     </div>
                 </div>
             </div>
@@ -157,7 +167,7 @@
                         Dengan memilih paket Professional, Anda akan mendapatkan source code website (tidak termasuk domain dan hosting) dengan tampilan sesuai yang Anda inginkan (maksimal 5 halaman/menu), sudah menggunakan multi bahasa (Indonesia dan Inggris), dashboard (untuk mengganti konten sendiri), dokumentasi dashboard (cara mengganti konten),  dan garansi support (jika terjadi kesalahan pada website) selama 1 bulan, terhitung sejak website telah selesai dikerjakan.
                     </div>
                     <div class="package__card__button">
-                        <button>Get it now</button>
+                        <button>Dapatkan Sekarang</button>
                     </div>
                 </div>
             </div>
@@ -167,7 +177,7 @@
         <div class="col-12 col-sm-8 offset-sm-2">
             <div class="row">
                 <div class="col-12 contact__title">
-                    Contact
+                    Kontak
                 </div>
             </div>
             <div class="row">
@@ -176,16 +186,17 @@
                 </div>
                 <div class="col-12 col-sm-6">
                     <p>
-                        If there is anything you want to ask, please let me know
+                        Jika ada sesuatu yang ingin Anda tanyakan, silahkan beri tahu Saya
                     </p>
-                    <button class="button">Contact me</button>
+                    <button class="button">Hubungi Saya</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 contact__footer">
                     <div class="row">
                         <div class="col-6 contact__footer__text">
-                            <div>Designed with&nbsp;<i data-feather="heart"></i></div>
+                            <div>Dibuat dengan</div>&nbsp;
+                            <i data-feather="heart"></i>
                         </div>
                         <div class="col-6">
                             <a href="#intro">

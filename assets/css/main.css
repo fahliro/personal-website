@@ -70,6 +70,28 @@ button {
   justify-content: flex-end;
   align-items: center;
 }
+.navigation__menu__flag {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navigation__menu__flag img {
+  width: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.navigation__menu__flag__option {
+  position: absolute;
+  display: flex;
+  top: 40px;
+  background: var(--royal-blue);
+  padding: 5px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+.navigation__menu__flag__option__id {
+  margin-right: 5px;
+}
 .navigation__menu__item {
   cursor: pointer;
   color: var(--white-05);
@@ -92,7 +114,7 @@ button {
   background-repeat: no-repeat;
 }
 .intro .row:first-child {
-  margin-bottom: 180px;
+  margin-bottom: 205px;
 } 
 .intro__greetings__name {
   font-weight: bold;
@@ -114,10 +136,9 @@ button {
   animation-duration: 5s;
   animation-iteration-count: infinite; */
 }
-.intro__cta a, .intro__cta p {
+.intro__cta a {
   display: flex;
-}
-.intro__cta a p {
+  align-items: center;
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -258,7 +279,7 @@ html, body, button {
     padding-right: 100px;
   }
   .intro .row:first-child {
-    margin-bottom: 470px;
+    margin-bottom: 490px;
   }
   .package {
     background-size: 110%;
