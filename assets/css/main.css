@@ -5,7 +5,6 @@
 
 /* global */
 html, body {
-  font-family: 'Lato', sans-serif;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -22,6 +21,30 @@ a {
 img {
   width: 100%;
   height: 100%;
+}
+button {
+  border: 0;
+  background: var(--royal-blue);
+  padding: 10px;
+  color: var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--woodsmoke-01)
+}
+::-webkit-scrollbar-thumb {
+  background: var(--woodsmoke-05)
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--woodsmoke-07)
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
 }
 /* end global */
 
@@ -69,7 +92,7 @@ img {
   background-repeat: no-repeat;
 }
 .intro .row:first-child {
-  margin-bottom: 180px;
+  margin-bottom: 200px;
 } 
 .intro__greetings__name {
   font-weight: bold;
@@ -86,32 +109,25 @@ img {
   justify-content: flex-end;
 }
 .intro__photo img {
-  width: 200px;
+  width: 70%;
   /* animation-name: floating;
   animation-duration: 5s;
   animation-iteration-count: infinite; */
 }
-.intro__cta a {
+.intro__cta a, .intro__cta p {
   display: flex;
-}
-.intro__cta a svg {
-  margin-right: 5px;
 }
 /* end section 1 */
 
 /* section 2 */
 .work {
   background: url(../images/17356.svg);
-  color: var(--white);
-  background-size: 108%;
+  background-size: 145%;
   background-position: top;
   background-repeat: no-repeat;
-  padding-top: 70px;
 }
 .work__title {
-  font-size: xx-large;
-  font-weight: bold;
-  margin-bottom: 50px;
+  color: var(--white);
 }
 .work__box {
   height: 200px;
@@ -122,19 +138,53 @@ img {
 .work__box.work__box--bottom {
   margin-bottom: 0;
 }
-.work__box:hover {
-  transform: scale(1.05);
-}
 /* end section 2 */
 
-/* section 3 */
-.contact {
-  padding-top: 70px;
+/* package section */
+.package {
+  background: url(../images/17356.svg);
+  background-size: 145%;
+  background-position: top;
+  background-repeat: no-repeat;
 }
-.contact__title {
-  font-size: xx-large;
+.package__title {
+  color: var(--white);
+}
+.package .package__card {
+  width: 100%;
+  transition: all .3s;
+  cursor: default;
+  text-align: center;
+}
+.package__card__header, .package__card__content {
+  margin-bottom: 40px;
+}
+.package__card__header__title {
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  font-size: large;
+}
+.package__card__header__price {
+  font-size: x-large;
+  font-weight: bold;
+  color: var(--royal-blue);
+}
+.package__card__content {
+  text-align: justify;
+  height: 200px;
+  overflow-y: auto;
+  padding: 0 10px;
+  font-size: large;
+}
+.package__card__button {
+  display: flex;
+  justify-content: center;
+}
+/* end package */
+
+/* section 3 */
+.contact .row:nth-child(2) img {
+  width: 50%;
 }
 .contact__footer {
   margin: 100px 0 15px 0;
@@ -155,24 +205,37 @@ img {
   display: flex;
   align-items: center;
 }
-.contact__footer__text svg {
-  margin-left: 5px;
+.contact__footer__text > div {
+  display: flex;
 }
-
-
 /* end section 3 */
 
 /* dry */
-.work__box {
+html, body, button {
+  font-family: 'Lato', sans-serif;
+}
+.work__box, .package__card {
   width: 100%;
   box-shadow: rgb(54 127 238 / 6%) 0px 27px 72px;
   border-radius: 5px;
   background-color: var(--white);
+  padding: 20px;
+}
+.work__box:hover, .package__card:hover {
+  transform: scale(1.05);
 }
 .contact__footer__btt {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.work, .contact, .package {
+  padding-top: 70px;
+}
+.contact__title, .work__title, .package__title {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-bottom: 50px;
 }
 /* end dry */
 
@@ -182,8 +245,17 @@ img {
   .col-sm-8 {
     padding: 0 150px 0 150px;
   }
+  .col-sm-3:first-child {
+    padding-left: 100px;
+  }
+  .col-sm-3:last-child {
+    padding-right: 100px;
+  }
   .intro .row:first-child {
     margin-bottom: 490px;
+  }
+  .package {
+    background-size: 110%;
   }
 }
 /* end minimum */
@@ -210,14 +282,11 @@ img {
     justify-content: center;
     margin-bottom: 30px;
   }
-  .intro__photo img {
-    width: 150px;
-  }
   .intro__greetings {
     order: 2;
   }
   /* section 2 */
-  .work {
+  .work, .package {
     background-size: 470%;
     background-position: top center;
   }

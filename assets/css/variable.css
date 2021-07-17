@@ -4,5 +4,7 @@
     --titan-white: #FBFBFF;
     --royal-blue: #367FEE;
     --woodsmoke: #151418;
+    --woodsmoke-01: rgba(21, 20, 24, 0.1);
     --woodsmoke-05: rgba(21, 20, 24, 0.5);
+    --woodsmoke-07: rgba(21, 20, 24, 0.7);
 }

@@ -12,4 +12,4 @@ function handleActiveMenuOnClick(type) {
     menu.classList.add('navigation__menu__item--active')
 }
 
-// notes: title line-bottom, trasnsition, pre-loading
+// notes: title line-bottom, trasnsition, pre-loading, overflow-x, bahasa, logo quality
