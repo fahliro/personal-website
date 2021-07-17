@@ -92,7 +92,7 @@ button {
   background-repeat: no-repeat;
 }
 .intro .row:first-child {
-  margin-bottom: 200px;
+  margin-bottom: 180px;
 } 
 .intro__greetings__name {
   font-weight: bold;
@@ -109,13 +109,19 @@ button {
   justify-content: flex-end;
 }
 .intro__photo img {
-  width: 70%;
+  width: 80%;
   /* animation-name: floating;
   animation-duration: 5s;
   animation-iteration-count: infinite; */
 }
 .intro__cta a, .intro__cta p {
   display: flex;
+}
+.intro__cta a p {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 30px;
 }
 /* end section 1 */
 
@@ -171,10 +177,9 @@ button {
 }
 .package__card__content {
   text-align: justify;
-  height: 200px;
+  height: 190px;
   overflow-y: auto;
   padding: 0 10px;
-  font-size: large;
 }
 .package__card__button {
   display: flex;
@@ -188,8 +193,9 @@ button {
 }
 .contact__footer {
   margin: 100px 0 15px 0;
+  padding: 0;
 }
-.contact__footer .row a {
+.contact__footer .row > div:last-child {
   display: flex;
   justify-content: flex-end;
 }
@@ -252,7 +258,7 @@ html, body, button {
     padding-right: 100px;
   }
   .intro .row:first-child {
-    margin-bottom: 490px;
+    margin-bottom: 470px;
   }
   .package {
     background-size: 110%;
@@ -290,16 +296,19 @@ html, body, button {
     background-size: 470%;
     background-position: top center;
   }
+  .package__card:first-child {
+    margin-bottom: 20px;
+  }
 }
 /* end maximum */
 /* end breakpoints */
 
 /* animations */
-/* @keyframes floating {
-  0%   {padding-top:0px;}
-  25%  {padding-top:0px;}
-  50%  {padding-top:10px;}
+@keyframes floating {
+  0%   {padding-top:0;}
+  25%  {padding-top:10px;}
+  50%  {padding-top:0;}
   75%  {padding-top:10px;}
-  100% {padding-top:0px;}
-} */
+  100% {padding-top:0;}
+}
 /* end animations */
