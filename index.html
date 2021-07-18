@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="robbyDev">
+    <meta name="keywords" content="Frontend Web Developer, Frontend, Web Developer, Web Development, Company Profile">
+    <meta name="description" content="Frontend Web Developer">
     <link rel="shortcut icon" href="./assets//images/34566.png" type="image/x-icon" sizes="1600x160">
-    <title>robbyDev | Personal Website</title>
+    <title>robbyDev | Frontend Web Developer</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,203 +16,171 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navigation"> 
-        <div class="col-12 col-sm-8 offset-sm-2">
-            <div class="row">
-                <div class="navigation__logo col-4">
-                    <a href="#intro">
-                        <img src="./assets/images/17846.png" class="navigation__logo__desktop" alt="Logo">
-                        <img src="./assets/images/34566.png" class="navigation__logo__mobile" alt="Logo">
-                    </a>
-                </div>
-                <div class="navigation__menu col-8">
-                    <a href="#intro">
-                        <div class="navigation__menu__item navigation__menu__item--home  navigation__menu__item--active" onclick="handleActiveMenuOnClick('home')">
-                            Beranda
-                        </div>
-                    </a>
-                    <!-- <a href="#work">
-                        <div class="navigation__menu__item navigation__menu__item--work" onclick="handleActiveMenuOnClick('work')">
-                            Work
-                        </div>
-                    </a> -->
-                    <a href="#package">
-                        <div class="navigation__menu__item navigation__menu__item--package" onclick="handleActiveMenuOnClick('package')">
-                            Paket
-                        </div>
-                    </a>
-                    <a href="#contact">
-                        <div class="navigation__menu__item navigation__menu__item--contact" onclick="handleActiveMenuOnClick('contact')">
-                            Kontak
-                        </div>
-                    </a>
-                    <div class="navigation__menu__flag">
-                        <img src="./assets/images/17852.svg" alt="ID" onclick="toggleLanguage()">
-                        <div class="navigation__menu__flag__option">
-                            <div class="navigation__menu__flag__option__id" onclick="switchLanguage('id')">
-                                <img src="./assets/images/17852.svg" alt="ID">
+    <div class="loader">
+        <div class="loader__spin"></div>
+    </div>
+    <div class="content">
+        <nav class="navigation"> 
+            <div class="col-12 col-sm-8 offset-sm-2">
+                <div class="row">
+                    <div class="navigation__logo col-4">
+                        <a href="#intro">
+                            <img src="./assets/images/17846.png" class="navigation__logo__desktop" alt="Logo">
+                            <img src="./assets/images/34566.png" class="navigation__logo__mobile" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="navigation__menu col-8">
+                        <a href="#intro">
+                            <div class="navigation__menu__item navigation__menu__item--home  navigation__menu__item--active" onclick="handleActiveMenuOnClick('home')">
+                                Beranda
                             </div>
-                            <div class="navigation__menu__flag__option__en" onclick="switchLanguage('en')">
-                                <img src="./assets/images/17353.svg" alt="EN">
+                        </a>
+                        <a href="#package">
+                            <div class="navigation__menu__item navigation__menu__item--package" onclick="handleActiveMenuOnClick('package')">
+                                Paket
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <section class="intro" id="intro">
-        <div class="col-12 col-sm-8 offset-sm-2">
-            <div class="row">
-                <div class="intro__greetings col-12 col-sm-6">
-                    <div class="intro__greetings__name">
-                        Hai, Saya Robby
-                    </div>
-                    <div class="intro__greetings__role">
-                        Frontend Web Developer
-                    </div>
-                    <div class="intro__greetings__desc">
-                        <p>
-                            Saya akan membuat website showcase untuk bisnis anda dengan mengutamakan estetika
-                        </p>
-                    </div>
-                </div>
-                <div class="intro__photo col-12 col-sm-6">
-                    <img src="./assets/images/17884.svg" alt="Photo">
-                </div>
-            </div>
-            <div class="row">
-                <div class="intro__cta col-12">
-                    <a href="#package">
-                        <i data-feather="arrow-down"></i>&nbsp;
-                        <p>Lihat paket dibawah ini</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- <section class="work" id="work">
-        <div class="col-12 col-sm-8 offset-sm-2">
-            <div class="row">
-                <div class="col-12 work__title">
-                    Work
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-sm-4">
-                    <div class="work__box"></div>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <div class="work__box"></div>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <div class="work__box"></div>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <div class="work__box"></div>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <div class="work__box"></div>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <div class="work__box"></div>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <div class="work__box work__box--bottom"></div>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <div class="work__box work__box--bottom"></div>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <div class="work__box work__box--bottom"></div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <section class="package" id="package">
-        <div class="col-12 col-sm-8 offset-sm-2">
-            <div class="row">
-                <div class="col-12 package__title">
-                    Paket
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-3 offset-sm-3">
-                <div class="package__card">
-                    <div class="package__card__header">
-                        <div class="package__card__header__title">
-                            Basic
-                        </div>
-                        <div class="package__card__header__price">
-                            Rp 3.000.000
-                        </div>
-                    </div>
-                    <div class="package__card__content">
-                        Dengan memilih paket Basic, Anda akan mendapatkan source code website (tidak termasuk domain dan hosting) dengan tampilan sesuai yang Anda inginkan (maksimal 5 halaman/menu), sudah menggunakan multi bahasa (Indonesia dan Inggris), dan garansi support (revisi tampilan/mengganti konten) selama 1 bulan, terhitung sejak website telah selesai dikerjakan.
-                    </div>
-                    <div class="package__card__button">
-                        <button>Dapatkan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-3">
-                <div class="package__card">
-                    <div class="package__card__header">
-                        <div class="package__card__header__title">
-                            Professional
-                        </div>
-                        <div class="package__card__header__price">
-                            Rp 5.000.000
-                        </div>
-                    </div>
-                    <div class="package__card__content">
-                        Dengan memilih paket Professional, Anda akan mendapatkan source code website (tidak termasuk domain dan hosting) dengan tampilan sesuai yang Anda inginkan (maksimal 5 halaman/menu), sudah menggunakan multi bahasa (Indonesia dan Inggris), dashboard (untuk mengganti konten sendiri), dokumentasi dashboard (cara mengganti konten),  dan garansi support (jika terjadi kesalahan pada website) selama 1 bulan, terhitung sejak website telah selesai dikerjakan.
-                    </div>
-                    <div class="package__card__button">
-                        <button>Dapatkan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <div class="col-12 col-sm-8 offset-sm-2">
-            <div class="row">
-                <div class="col-12 contact__title">
-                    Kontak
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-sm-6">
-                    <img src="./assets/images/17376.svg" alt="Contact">
-                </div>
-                <div class="col-12 col-sm-6">
-                    <p>
-                        Jika ada sesuatu yang ingin Anda tanyakan, silahkan beri tahu Saya
-                    </p>
-                    <button class="button">Hubungi Saya</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 contact__footer">
-                    <div class="row">
-                        <div class="col-6 contact__footer__text">
-                            <div>Dibuat dengan</div>&nbsp;
-                            <i data-feather="heart"></i>
-                        </div>
-                        <div class="col-6">
-                            <a href="#intro">
-                                <div class="contact__footer__btt">
-                                    <i data-feather="chevron-up"></i>
+                        </a>
+                        <a href="#contact">
+                            <div class="navigation__menu__item navigation__menu__item--contact" onclick="handleActiveMenuOnClick('contact')">
+                                Kontak
+                            </div>
+                        </a>
+                        <div class="navigation__menu__flag">
+                            <img src="./assets/images/17852.svg" alt="ID" onclick="toggleLanguage()">
+                            <div class="navigation__menu__flag__option">
+                                <div class="navigation__menu__flag__option__id" onclick="switchLanguage('id')">
+                                    <img src="./assets/images/17852.svg" alt="ID">
                                 </div>
+                                <div class="navigation__menu__flag__option__en" onclick="switchLanguage('en')">
+                                    <img src="./assets/images/17353.svg" alt="EN">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="intro" id="intro">
+            <div class="col-12 col-sm-8 offset-sm-2">
+                <div class="row">
+                    <div class="intro__greetings col-12 col-sm-6">
+                        <div class="intro__greetings__name">
+                            Hai, Saya Robby
+                        </div>
+                        <div class="intro__greetings__role">
+                            Frontend Web Developer
+                        </div>
+                        <div class="intro__greetings__desc">
+                            <p>
+                                Saya akan membuat showcase website untuk bisnis Anda dengan mengutamakan estetika
+                            </p>
+                        </div>
+                    </div>
+                    <div class="intro__photo col-12 col-sm-6">
+                        <img src="./assets/images/17884.svg" alt="Photo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="intro__cta col-12">
+                        <a href="#package">
+                            <i data-feather="arrow-down"></i>&nbsp;
+                            <p>Lihat paket dibawah ini</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="package" id="package">
+            <div class="col-12 col-sm-8 offset-sm-2">
+                <div class="row">
+                    <div class="col-12 package__title">
+                        Paket
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-3 offset-sm-3">
+                    <div class="package__card">
+                        <div class="package__card__header">
+                            <div class="package__card__header__title">
+                                Basic
+                            </div>
+                            <div class="package__card__header__price">
+                                Rp 1.000.000
+                            </div>
+                        </div>
+                        <div class="package__card__content">
+                            Dengan memilih paket Basic, Anda akan mendapatkan source code website (tidak termasuk domain dan hosting) dengan tampilan sesuai yang Anda inginkan (maksimal 5 halaman/menu), sudah menggunakan multi bahasa (Indonesia dan Inggris), dan garansi support (revisi tampilan/mengganti konten) selama 1 bulan, terhitung sejak website telah selesai dikerjakan.
+                        </div>
+                        <div class="package__card__button">
+                            <a href="https://api.whatsapp.com/send/?phone=083877645848&text=Halo,%20Saya%20mau%20pesan%20paket%20Basic%20">
+                                <button>Pesan Sekarang</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <div class="package__card">
+                        <div class="package__card__header">
+                            <div class="package__card__header__title">
+                                Professional
+                            </div>
+                            <div class="package__card__header__price">
+                                Rp 2.000.000
+                            </div>
+                        </div>
+                        <div class="package__card__content">
+                            Dengan memilih paket Professional, Anda akan mendapatkan source code website (tidak termasuk domain dan hosting) dengan tampilan sesuai yang Anda inginkan (maksimal 5 halaman/menu), sudah menggunakan multi bahasa (Indonesia dan Inggris), dashboard (untuk mengganti konten sendiri), dokumentasi dashboard (cara mengganti konten),  dan garansi support (jika terjadi kesalahan pada website) selama 1 bulan, terhitung sejak website telah selesai dikerjakan.
+                        </div>
+                        <div class="package__card__button">
+                            <a href="https://api.whatsapp.com/send/?phone=083877645848&text=Halo,%20Saya%20mau%20pesan%20paket%20Professional%20">
+                                <button>Pesan Sekarang</button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section class="contact" id="contact">
+            <div class="col-12 col-sm-8 offset-sm-2">
+                <div class="row">
+                    <div class="col-12 contact__title">
+                        Kontak
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <img src="./assets/images/17376.svg" alt="Contact">
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <p>
+                            Jika ada sesuatu yang ingin Anda tanyakan, silahkan beri tahu Saya dengan menekan tombol di bawah ini
+                        </p>
+                        <a href="https://api.whatsapp.com/send/?phone=083877645848&text=Halo,%20Saya%20mau%20bertanya%20">
+                            <button class="button">Hubungi Saya</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 contact__footer">
+                        <div class="row">
+                            <div class="col-6 contact__footer__text">
+                                <div>Dibuat dengan</div>&nbsp;
+                                <i data-feather="heart"></i>
+                            </div>
+                            <div class="col-6">
+                                <a href="#intro">
+                                    <div class="contact__footer__btt">
+                                        <i data-feather="chevron-up"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

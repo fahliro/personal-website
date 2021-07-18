@@ -46,9 +46,32 @@ button {
   margin-right: 0;
   margin-left: 0;
 }
+.loader {
+  position: absolute;
+  background: var(--woodsmoke);
+  width: 100%;
+  height: 100vh;
+  transition: all .3s;
+}
+.loader__spin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid var(--titan-white);
+  border-radius: 50%;
+  border-top: 5px solid var(--royal-blue);
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+.content {
+  opacity: 0;
+  position: fixed;
+}
 /* end global */
 
-/* navigation */
+/* section 0 */
 .navigation {
   height: 70px;
   position: fixed;
@@ -102,7 +125,7 @@ button {
 .navigation__menu a:not(:last-child) {
   margin-right: 20px;
 }
-/* end navigation */
+/* end section 0 */
 
 /* section 1 */
 .intro {
@@ -132,9 +155,6 @@ button {
 }
 .intro__photo img {
   width: 80%;
-  /* animation-name: floating;
-  animation-duration: 5s;
-  animation-iteration-count: infinite; */
 }
 .intro__cta a {
   display: flex;
@@ -165,9 +185,7 @@ button {
 .work__box.work__box--bottom {
   margin-bottom: 0;
 }
-/* end section 2 */
 
-/* package section */
 .package {
   background: url(../images/17356.svg);
   background-size: 145%;
@@ -206,7 +224,7 @@ button {
   display: flex;
   justify-content: center;
 }
-/* end package */
+/* end section 2 */
 
 /* section 3 */
 .contact .row:nth-child(2) img {
@@ -267,7 +285,6 @@ html, body, button {
 /* end dry */
 
 /* breakpoints */
-/* minnimum */
 @media(min-width: 1920px) {
   .col-sm-8 {
     padding: 0 150px 0 150px;
@@ -278,21 +295,20 @@ html, body, button {
   .col-sm-3:last-child {
     padding-right: 100px;
   }
+  
   .intro .row:first-child {
     margin-bottom: 490px;
   }
+  
   .package {
     background-size: 110%;
   }
 }
-/* end minimum */
 
-/* maximum */
 @media(max-width: 1200px) {}
 @media(max-width: 992px) {}
 @media(max-width: 768px) {}
 @media(max-width: 576px) {
-  /* nav section */
   .navigation__logo__mobile {
     display: block;
     width: 50px;
@@ -300,7 +316,7 @@ html, body, button {
   .navigation__logo__desktop {
     display: none;
   }
-  /* section 1 */
+
   .intro {
     padding-top: 100px;
   }
@@ -312,7 +328,7 @@ html, body, button {
   .intro__greetings {
     order: 2;
   }
-  /* section 2 */
+
   .work, .package {
     background-size: 470%;
     background-position: top center;
@@ -321,7 +337,6 @@ html, body, button {
     margin-bottom: 20px;
   }
 }
-/* end maximum */
 /* end breakpoints */
 
 /* animations */
@@ -331,5 +346,9 @@ html, body, button {
   50%  {padding-top:0;}
   75%  {padding-top:10px;}
   100% {padding-top:0;}
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 /* end animations */
