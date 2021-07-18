@@ -34,7 +34,7 @@ function setLanguage() {
 }
 setLanguage()
 function handleLanguage() {
-    let link = 'https://api.whatsapp.com/send/?phone=083877645848&text='
+    let link = 'https://api.whatsapp.com/send/?phone=6283877645848&text='
     let navigationMenuHome = document.querySelector('.navigation__menu a:nth-child(1) .navigation__menu__item')
     let navigationMenuPackage = document.querySelector('.navigation__menu a:nth-child(2) .navigation__menu__item')
     let navigationMenuContact = document.querySelector('.navigation__menu a:nth-child(3) .navigation__menu__item')
