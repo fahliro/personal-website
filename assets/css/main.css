@@ -313,6 +313,12 @@ html, body, button {
 @media(max-width: 992px) {}
 @media(max-width: 768px) {}
 @media(max-width: 576px) {
+  .work, .contact, .package {
+    padding-top: 50px;
+  }
+  .navigation {
+    height: 45px;
+  }
   .navigation__menu__flag {
     margin-top: 0;
     margin-bottom: 2px;
