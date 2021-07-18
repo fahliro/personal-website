@@ -327,11 +327,14 @@ html, body, button {
   .navigation__menu__mobile {
     display: block;
   } 
+  .navigation__menu {
+    position: relative;
+  }
   .navigation__menu__link {
     flex-direction: column;
     position: absolute;
-    margin-right: 32px;
-    margin-top: 120px;
+    top: 40px;
+    right: 47px;
     background: var(--royal-blue);
     align-items: flex-start;
     padding: 12px;
