@@ -8,14 +8,15 @@ function handleActiveMenuOnClick(type) {
     menu.classList.add('navigation__menu__item--active')
 }
 let navigationMenuFlagOption = document.querySelector('.navigation__menu__flag__option')
-function toggleLanguage() {
-    if(navigationMenuFlagOption.style.visibility == 'visible') {
+let navigationMenuLink = document.querySelector('.navigation__menu__link')
+function toggle(type) {
+    if(type == 'language' ? navigationMenuFlagOption.style.visibility == 'visible' : navigationMenuLink.style.visibility == 'visible') {
         setTimeout(() => {
-            navigationMenuFlagOption.style.visibility = 'hidden'
+            type == 'language' ? navigationMenuFlagOption.style.visibility = 'hidden' : navigationMenuLink.style.visibility = 'hidden'
         }, 0)
     } else {
         setTimeout(() => {
-            navigationMenuFlagOption.style.visibility = 'visible'
+            type == 'language' ? navigationMenuFlagOption.style.visibility = 'visible' : navigationMenuLink.style.visibility = 'visible'
         }, 0)
     }
 }
@@ -35,9 +36,9 @@ function setLanguage() {
 setLanguage()
 function handleLanguage() {
     let link = 'https://api.whatsapp.com/send/?phone=6283877645848&text='
-    let navigationMenuHome = document.querySelector('.navigation__menu a:nth-child(1) .navigation__menu__item')
-    let navigationMenuPackage = document.querySelector('.navigation__menu a:nth-child(2) .navigation__menu__item')
-    let navigationMenuContact = document.querySelector('.navigation__menu a:nth-child(3) .navigation__menu__item')
+    let navigationMenuHome = document.querySelector('.navigation__menu__link a:nth-child(1) .navigation__menu__link__item')
+    let navigationMenuPackage = document.querySelector('.navigation__menu__link a:nth-child(2) .navigation__menu__link__item')
+    let navigationMenuContact = document.querySelector('.navigation__menu__link a:nth-child(3) .navigation__menu__link__item')
     let introGreetingsName = document.querySelector('.intro__greetings__name')
     let introGreetingsDesc = document.querySelector('.intro__greetings__desc > p')
     let introCTA = document.querySelector('.intro__cta p')
@@ -76,7 +77,10 @@ function handleLanguage() {
 handleLanguage()
 document.addEventListener('click', () => {
     if(navigationMenuFlagOption.style.visibility == 'visible') {
-        toggleLanguage()
+        toggle('language')
+    }
+    if(navigationMenuLink.style.visibility == 'visible') {
+        toggle('menu')
     }
 })
 function handleLoading() {

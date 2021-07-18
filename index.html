@@ -23,30 +23,35 @@
         <nav class="navigation"> 
             <div class="col-12 col-sm-8 offset-sm-2">
                 <div class="row">
-                    <div class="navigation__logo col-4">
+                    <div class="navigation__logo col-6 col-sm-4">
                         <a href="#intro">
                             <img src="./assets/images/17846.png" class="navigation__logo__desktop" alt="Logo">
                             <img src="./assets/images/34566.png" class="navigation__logo__mobile" alt="Logo">
                         </a>
                     </div>
-                    <div class="navigation__menu col-8">
-                        <a href="#intro">
-                            <div class="navigation__menu__item navigation__menu__item--home  navigation__menu__item--active" onclick="handleActiveMenuOnClick('home')">
-                                Beranda
-                            </div>
-                        </a>
-                        <a href="#package">
-                            <div class="navigation__menu__item navigation__menu__item--package" onclick="handleActiveMenuOnClick('package')">
-                                Paket
-                            </div>
-                        </a>
-                        <a href="#contact">
-                            <div class="navigation__menu__item navigation__menu__item--contact" onclick="handleActiveMenuOnClick('contact')">
-                                Kontak
-                            </div>
-                        </a>
+                    <div class="navigation__menu col-6 col-sm-8">
+                        <div class="navigation__menu__link">
+                            <a href="#intro">
+                                <div class="navigation__menu__link__item navigation__menu__link__item--home  navigation__menu__link__item--active" onclick="handleActiveMenuOnClick('home')">
+                                    Beranda
+                                </div>
+                            </a>
+                            <a href="#package">
+                                <div class="navigation__menu__link__item navigation__menu__link__item--package" onclick="handleActiveMenuOnClick('package')">
+                                    Paket
+                                </div>
+                            </a>
+                            <a href="#contact">
+                                <div class="navigation__menu__link__item navigation__menu__link__item--contact" onclick="handleActiveMenuOnClick('contact')">
+                                    Kontak
+                                </div>
+                            </a>
+                        </div>
+                        <div class="navigation__menu__mobile" onclick="toggle('menu')">
+                            <i data-feather="menu"></i>
+                        </div>
                         <div class="navigation__menu__flag">
-                            <img src="./assets/images/17852.svg" alt="ID" onclick="toggleLanguage()">
+                            <img src="./assets/images/17852.svg" alt="ID" onclick="toggle('language')">
                             <div class="navigation__menu__flag__option">
                                 <div class="navigation__menu__flag__option__id" onclick="switchLanguage('id')">
                                     <img src="./assets/images/17852.svg" alt="ID">
