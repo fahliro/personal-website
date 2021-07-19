@@ -121,6 +121,7 @@ button {
 .navigation__menu__link__item {
   cursor: pointer;
   color: var(--white-05);
+  white-space: nowrap;
 }
 .navigation__menu__link__item--active, .navigation__menu__link__item:hover {
   color: var(--white);
@@ -212,10 +213,10 @@ button {
 .package__card__header__title {
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: large;
+  font-size: x-large;
 }
 .package__card__header__price {
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: bold;
   color: var(--royal-blue);
 }
@@ -241,10 +242,12 @@ button {
   display: flex;
   align-items: center;
 }
-.faq__content__answer {
+.faq__content .col-12.faq__content__answer {
   visibility: hidden;
-  position: fixed;
   transition: all .3s;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
 }
 .faq__content__question svg {
   position: absolute;

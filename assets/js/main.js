@@ -20,10 +20,6 @@ function toggle(type) {
         }, 0)
     }
 }
-function switchLanguage(id) {
-    localStorage.setItem('lang', id)
-    location.reload()
-}
 function setLanguage() {
     let language = document.querySelector('.navigation__menu__flag > img')
     let path = './assets/images/'
@@ -34,11 +30,16 @@ function setLanguage() {
     }
 }
 setLanguage()
+function switchLanguage(id) {
+    localStorage.setItem('lang', id)
+    location.reload()
+}
 function handleLanguage() {
     let link = 'https://api.whatsapp.com/send/?phone=6283877645848&text='
     let navigationMenuHome = document.querySelector('.navigation__menu__link a:nth-child(1) .navigation__menu__link__item')
     let navigationMenuPackage = document.querySelector('.navigation__menu__link a:nth-child(2) .navigation__menu__link__item')
-    let navigationMenuContact = document.querySelector('.navigation__menu__link a:nth-child(3) .navigation__menu__link__item')
+    let navigationMenuFaq = document.querySelector('.navigation__menu__link a:nth-child(3) .navigation__menu__link__item')
+    let navigationMenuContact = document.querySelector('.navigation__menu__link a:nth-child(4) .navigation__menu__link__item')
     let introGreetingsName = document.querySelector('.intro__greetings__name')
     let introGreetingsDesc = document.querySelector('.intro__greetings__desc > p')
     let introCTA = document.querySelector('.intro__cta p')
@@ -48,7 +49,7 @@ function handleLanguage() {
     let packageCardButton = document.querySelectorAll('.package__card__button button')
     let packageCardButtonLink = document.querySelectorAll('.package__card__button a')
     let faqTitle = document.querySelector('.faq__title')
-    
+    let faqContentQuestion = document.querySelectorAll('.faq__content__question')
     let contactTitle = document.querySelector('.contact__title')
     let contactText = document.querySelector('.contact > div > div:nth-child(2) p')
     let contactButton = document.querySelector('.contact > div > div:nth-child(2) button')
@@ -57,6 +58,7 @@ function handleLanguage() {
     if(localStorage.getItem('lang') == 'en') {
         navigationMenuHome.innerText = 'Home'
         navigationMenuPackage.innerText = 'Package'
+        navigationMenuFaq.innerText = 'FAQ'
         navigationMenuContact.innerText = 'Contact'
         introGreetingsName.innerText = `Hi, I'm Robby`
         introGreetingsDesc.innerText = `I will create a showcase website for your business by prioritizing aesthetics`
@@ -70,7 +72,10 @@ function handleLanguage() {
         packageCardButtonLink[0].href = link + 'Hi,%20I%20want%20to%20order%20a%20Basic%20package%20'
         packageCardButtonLink[1].href = link + 'Hi,%20I%20want%20to%20order%20a%20Professional%20package%20'
         faqTitle.innerText = `Frequently Asked Questions`
-        
+        faqContentQuestion[0].querySelector('div').innerText = `What is Showcase Website?`
+        faqContentQuestion[1].querySelector('div').innerText = `What is Source Code?`
+        faqContentQuestion[2].querySelector('div').innerText = `What is Domain and Hosting?`
+        faqContentQuestion[3].querySelector('div').innerText = `What to prepare if you want to order Website?`
         contactTitle.innerText = `Contact`
         contactText.innerText = `If there is anything you want to ask, please let me know by clicking the button below`
         contactButton.innerText = `Contact Me`
@@ -99,18 +104,22 @@ function handleLoading() {
 handleLoading()
 function toggleFAQ() {
     let faqContentQuestion = document.querySelectorAll('.faq__content__question')
-    let faqContentAnswer = document.querySelectorAll('.faq__content__answer')
+    let faqContentAnswer = document.querySelectorAll('.faq__content .col-12.faq__content__answer')
     faqContentQuestion.forEach((faq, index) => {
         faq.addEventListener('click', ()=> {
             if(faqContentAnswer[index].style.visibility == 'visible') {
                 faqContentAnswer[index].style.visibility = 'hidden'
-                faqContentAnswer[index].style.position = 'fixed'
+                faqContentAnswer[index].style.height = 0
+                faqContentAnswer[index].style.padding = 0
+
                 faq.querySelectorAll('svg')[0].style.visibility = 'visible'
                 faq.querySelectorAll('svg')[1].style.visibility = 'hidden'
             } else {
                 faqContentAnswer[index].style.marginTop = '10px'
                 faqContentAnswer[index].style.visibility = 'visible'
-                faqContentAnswer[index].style.position = 'unset'
+                faqContentAnswer[index].style.height = 'auto'
+                faqContentAnswer[index].style.padding = '15px'
+                
                 faq.querySelectorAll('svg')[0].style.visibility = 'hidden'
                 faq.querySelectorAll('svg')[1].style.visibility = 'visible'
             }
@@ -118,4 +127,4 @@ function toggleFAQ() {
     })
 }
 toggleFAQ()
-// dashboard, ios scroll
+// dashboard, ios scroll, faq content
