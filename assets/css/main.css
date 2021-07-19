@@ -290,7 +290,7 @@ html, body, button {
 
 /* breakpoints */
 @media(min-width: 1920px) {
-  .col-sm-8 {
+  .navigation > .col-sm-8, .intro > .col-sm-8, .package > .contact .col-sm-8 {
     padding: 0 150px 0 150px;
   }
   .col-sm-3:first-child {
@@ -316,6 +316,10 @@ html, body, button {
   .work, .contact, .package {
     padding-top: 50px;
   }
+  .work__box:hover, .package__card:hover {
+    transform: unset;
+  }
+
   .navigation {
     height: 45px;
   }
