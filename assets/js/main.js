@@ -1,11 +1,11 @@
 feather.replace()
 function handleActiveMenuOnClick(type) {
-    let menus = document.querySelectorAll('.navigation__menu__item')
+    let menus = document.querySelectorAll('.navigation__menu__link__item')
     menus.forEach((item) => {
-        item.classList.remove('navigation__menu__item--active')
+        item.classList.remove('navigation__menu__link__item--active')
     })
-    let menu = document.querySelector('.navigation__menu__item--' + type)
-    menu.classList.add('navigation__menu__item--active')
+    let menu = document.querySelector('.navigation__menu__link__item--' + type)
+    menu.classList.add('navigation__menu__link__item--active')
 }
 let navigationMenuFlagOption = document.querySelector('.navigation__menu__flag__option')
 let navigationMenuLink = document.querySelector('.navigation__menu__link')
@@ -93,4 +93,4 @@ function handleLoading() {
     }, 1500)
 }
 handleLoading()
-// dashboard
+// dashboard, ios scroll
