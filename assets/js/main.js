@@ -47,6 +47,8 @@ function handleLanguage() {
     let packageCardContentProfessional = document.querySelectorAll('.package__card__content')[1]
     let packageCardButton = document.querySelectorAll('.package__card__button button')
     let packageCardButtonLink = document.querySelectorAll('.package__card__button a')
+    let faqTitle = document.querySelector('.faq__title')
+    
     let contactTitle = document.querySelector('.contact__title')
     let contactText = document.querySelector('.contact > div > div:nth-child(2) p')
     let contactButton = document.querySelector('.contact > div > div:nth-child(2) button')
@@ -67,6 +69,8 @@ function handleLanguage() {
         })
         packageCardButtonLink[0].href = link + 'Hi,%20I%20want%20to%20order%20a%20Basic%20package%20'
         packageCardButtonLink[1].href = link + 'Hi,%20I%20want%20to%20order%20a%20Professional%20package%20'
+        faqTitle.innerText = `Frequently Asked Questions`
+        
         contactTitle.innerText = `Contact`
         contactText.innerText = `If there is anything you want to ask, please let me know by clicking the button below`
         contactButton.innerText = `Contact Me`
@@ -93,4 +97,25 @@ function handleLoading() {
     }, 1500)
 }
 handleLoading()
+function toggleFAQ() {
+    let faqContentQuestion = document.querySelectorAll('.faq__content__question')
+    let faqContentAnswer = document.querySelectorAll('.faq__content__answer')
+    faqContentQuestion.forEach((faq, index) => {
+        faq.addEventListener('click', ()=> {
+            if(faqContentAnswer[index].style.visibility == 'visible') {
+                faqContentAnswer[index].style.visibility = 'hidden'
+                faqContentAnswer[index].style.position = 'fixed'
+                faq.querySelectorAll('svg')[0].style.visibility = 'visible'
+                faq.querySelectorAll('svg')[1].style.visibility = 'hidden'
+            } else {
+                faqContentAnswer[index].style.marginTop = '10px'
+                faqContentAnswer[index].style.visibility = 'visible'
+                faqContentAnswer[index].style.position = 'unset'
+                faq.querySelectorAll('svg')[0].style.visibility = 'hidden'
+                faq.querySelectorAll('svg')[1].style.visibility = 'visible'
+            }
+        })
+    })
+}
+toggleFAQ()
 // dashboard, ios scroll
