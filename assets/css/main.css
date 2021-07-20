@@ -246,15 +246,13 @@ button {
   visibility: hidden;
   transition: all .3s;
   height: 0;
-  padding: 0;
+  padding: 0 15px;
   overflow: hidden;
 }
 .faq__content__question svg {
   position: absolute;
   right: 8px;
-}
-.faq__content__question svg:last-child {
-  visibility: hidden;
+  transition: all .3s;
 }
 .faq__content .faq__content__answer {
   padding: 15px;

@@ -108,20 +108,19 @@ function toggleFAQ() {
     faqContentQuestion.forEach((faq, index) => {
         faq.addEventListener('click', ()=> {
             if(faqContentAnswer[index].style.visibility == 'visible') {
+                faqContentAnswer[index].style.marginTop = 0
                 faqContentAnswer[index].style.visibility = 'hidden'
                 faqContentAnswer[index].style.height = 0
-                faqContentAnswer[index].style.padding = 0
+                faqContentAnswer[index].style.padding = '0 15px'
 
-                faq.querySelectorAll('svg')[0].style.visibility = 'visible'
-                faq.querySelectorAll('svg')[1].style.visibility = 'hidden'
+                faq.querySelectorAll('svg')[0].style.transform = 'rotate(0deg)'
             } else {
                 faqContentAnswer[index].style.marginTop = '10px'
                 faqContentAnswer[index].style.visibility = 'visible'
                 faqContentAnswer[index].style.height = 'auto'
                 faqContentAnswer[index].style.padding = '15px'
                 
-                faq.querySelectorAll('svg')[0].style.visibility = 'hidden'
-                faq.querySelectorAll('svg')[1].style.visibility = 'visible'
+                faq.querySelectorAll('svg')[0].style.transform = 'rotate(90deg)'
             }
         })
     })
