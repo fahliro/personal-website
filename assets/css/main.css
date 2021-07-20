@@ -246,6 +246,9 @@ button {
   padding: 0 15px;
   overflow: hidden;
 }
+.faq__content__question > div {
+  margin-right: 15px;
+}
 .faq__content__question svg {
   position: absolute;
   right: 8px;
