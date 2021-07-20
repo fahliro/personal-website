@@ -50,6 +50,7 @@ function handleLanguage() {
     let packageCardButtonLink = document.querySelectorAll('.package__card__button a')
     let faqTitle = document.querySelector('.faq__title')
     let faqContentQuestion = document.querySelectorAll('.faq__content__question')
+    let faqContentAnswer = document.querySelectorAll('.faq__content__answer')
     let contactTitle = document.querySelector('.contact__title')
     let contactText = document.querySelector('.contact > div > div:nth-child(2) p')
     let contactButton = document.querySelector('.contact > div > div:nth-child(2) button')
@@ -61,11 +62,11 @@ function handleLanguage() {
         navigationMenuFaq.innerText = 'FAQ'
         navigationMenuContact.innerText = 'Contact'
         introGreetingsName.innerText = `Hi, I'm Robby`
-        introGreetingsDesc.innerText = `I will create a showcase website for your business by prioritizing aesthetics`
-        introCTA.innerText = `See the package below`
+        introGreetingsDesc.innerText = `I will create a Showcase Website for your business by prioritizing Aesthetics`
+        introCTA.innerText = `See the Package below`
         packageTitle.innerText = `Package`
-        packageCardContentBasic.innerText = `By choosing the Basic package, you will get the website source code (excluding domain and hosting) with the design you want (maximum 5 pages/menu), already using multi-language (Indonesian and English), and support guarantee (design revision/content change) for 1 month, starting from the time the website has been completed.`
-        packageCardContentProfessional.innerText = `By choosing the Professional package, you will get the website source code (excluding domain and hosting) with the design you want (maximum 5 pages/menu), already using multi-language (Indonesian and English), dashboard (to change your own content), dashboard documentation (how to change content), and support guarantee (if an error occurs on the website) for 1 month, starting from the time the website has been completed.`
+        packageCardContentBasic.innerText = `By choosing the Basic package, you will get the website source code (excluding domain and hosting) with the design on you (maximum 5 pages/menu), already using multi-language (Indonesian and English), and support guarantee (design revision/content change) for 1 month, starting from the time the website has been completed.`
+        packageCardContentProfessional.innerText = `By choosing the Professional package, you will get the website source code (excluding domain and hosting) with the design on you (maximum 5 pages/menu), already using multi-language (Indonesian and English), dashboard (to change your own content), dashboard documentation (how to change content), and support guarantee (if an error occurs on the website) for 1 month, starting from the time the website has been completed.`
         packageCardButton.forEach((button) => {
             button.innerText = `Order Now`
         })
@@ -75,7 +76,27 @@ function handleLanguage() {
         faqContentQuestion[0].querySelector('div').innerText = `What is Showcase Website?`
         faqContentQuestion[1].querySelector('div').innerText = `What is Source Code?`
         faqContentQuestion[2].querySelector('div').innerText = `What is Domain and Hosting?`
-        faqContentQuestion[3].querySelector('div').innerText = `What to prepare if you want to order Website?`
+        faqContentQuestion[3].querySelector('div').innerText = `What are the advantages offered by robbyDev?`
+        faqContentQuestion[4].querySelector('div').innerText = `What to prepare if you want to order Website?`
+        faqContentAnswer[0].innerText = `Showcase Website is a website that is used to display Products or Services with the aim of increasing Brand Awareness`
+        faqContentAnswer[1].innerText = `Source Code is a collection of Code that is used to create a website`
+        faqContentAnswer[2].innerText = `Domain is the name/address of a website and is Unique, while Hosting is a storage service for storing websites so that they can be accessed Online`
+        faqContentAnswer[3].innerHTML = `
+            With prices starting from Rp 1.000.000, you have got a website ready to go Online with the following :
+            <ul>
+                <li>Design on you</li>
+                <li>5 pages/menu</li>
+                <li>Multi-language</li>
+            </ul>
+        `
+        faqContentAnswer[4].innerHTML = `
+            Things that must be prepared if you want to order a website are :
+            <ul>
+                <li>Design (Figma, Adobe XD, dll) or website reference</li>
+                <li>Content (images and text)</li>
+                <li>Domain and Hosting if available, if not, I can help with additional costs starting from Rp 500.000</li>
+            </ul>
+        `
         contactTitle.innerText = `Contact`
         contactText.innerText = `If there is anything you want to ask, please let me know by clicking the button below`
         contactButton.innerText = `Contact Me`
@@ -126,4 +147,4 @@ function toggleFAQ() {
     })
 }
 toggleFAQ()
-// dashboard, ios scroll, faq content
+// dashboard
