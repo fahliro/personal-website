@@ -82,9 +82,9 @@ function handleLanguage() {
         faqContentAnswer[1].innerText = `Source Code is a collection of Code that is used to create a website`
         faqContentAnswer[2].innerText = `Domain is the name/address of a website and is Unique, while Hosting is a storage service for storing websites so that they can be accessed Online`
         faqContentAnswer[3].innerHTML = `
-            With prices starting from Rp 1.000.000, you have got a website ready to go Online with the following :
+            With prices starting from Rp 1.500.000, you have got a website ready to go Online with the following :
             <ul>
-                <li>Design on you</li>
+                <li>Design on you (not template/wordpress)</li>
                 <li>5 pages/menu</li>
                 <li>Multi-language</li>
             </ul>
